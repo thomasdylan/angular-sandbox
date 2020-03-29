@@ -7,14 +7,16 @@ import { User } from '../../models/User';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.sass']
 })
+
 export class UsersComponent implements OnInit {
   users: User[];
+  showExtended: boolean = true;
+  loaded: boolean = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-    this.users = [
-      {
+    this.users = [{
         firstName: 'John',
         lastName: 'Doe',
         age: 30,
@@ -46,15 +48,13 @@ export class UsersComponent implements OnInit {
       }
     ];
 
+    this.loaded = true;
+
+
+
     this.addUser({
       firstName: 'David',
-      lastName: 'Jackson',
-      age: 44,
-      address: {
-        street: '12 Wake St',
-        city: 'Miami',
-        state: 'FL'
-      }
+      lastName: 'Jackson'
     })
   }
 
