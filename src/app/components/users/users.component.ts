@@ -14,6 +14,7 @@ export class UsersComponent implements OnInit {
   loaded: boolean = false;
   enableAdd: boolean = true;
   currentClasses = {};
+  currentStyles = {};
 
   constructor() {}
 
@@ -66,6 +67,7 @@ export class UsersComponent implements OnInit {
     // })
 
     this.setCurrentClasses();
+    this.setCurrentStyles();
   }
 
   addUser(user: User) {
@@ -74,8 +76,15 @@ export class UsersComponent implements OnInit {
 
   setCurrentClasses() {
     this.currentClasses = {
-      'btn-success': this.enableAdd,
+      'btn btn-success': this.enableAdd,
       'big-text': this.showExtended
+    };
+  }
+
+  setCurrentStyles() {
+    this.currentStyles = {
+      'padding-top': this.showExtended ? '0' : '40px',
+      'font-size': this.showExtended ? '' : '40px'
     }
   }
 
