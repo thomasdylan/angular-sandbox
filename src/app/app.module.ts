@@ -14,6 +14,7 @@ import { UserService } from './services/user.service';
 import { PostService } from './services/post.service';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { HomeComponent } from './components/home/home.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './components/home/home.component';
     NavbarComponent,
     PostComponent,
     PostFormComponent,
-    HomeComponent
+    HomeComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
